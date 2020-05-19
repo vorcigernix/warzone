@@ -16,9 +16,8 @@ export default function Index({ preview, allPosts }) {
         <Head>
           <title>Warzone Community Portal</title>
         </Head>
-        <Container>
-          <Intro/>
-          {heroPost && (
+        <Navigation/>
+        {heroPost && (
             <HeroPost
               title={heroPost.title}
               coverImage={heroPost.coverImage}
@@ -28,6 +27,7 @@ export default function Index({ preview, allPosts }) {
               excerpt={heroPost.excerpt}
             />
           )}
+        <Container>
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
       </Layout>

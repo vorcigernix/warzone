@@ -1,7 +1,5 @@
-import Link from 'next/link'
-import Avatar from '../components/avatar'
-import Date from '../components/date'
-import CoverImage from './cover-image'
+import Link from "next/link";
+import CoverImage from "./cover-image";
 
 export default function PostPreview({
   title,
@@ -12,20 +10,29 @@ export default function PostPreview({
   slug,
 }) {
   return (
-    <div>
+    <div className="overflow-hidden bg-accent-1 shadow-small border-gray-400 hover:shadow-medium transition-shadow duration-200">
       <div className="mb-5">
         <CoverImage title={title} slug={slug} url={coverImage.url} />
       </div>
-      <h3 className="text-3xl mb-3 leading-snug">
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a className="hover:underline">{title}</a>
-        </Link>
-      </h3>
-      <div className="text-lg mb-4">
-        <Date dateString={date} />
+      <div className="px-6 py-4">
+        <h3 className="text-3xl mb-3 leading-snug">
+          <Link as={`/posts/${slug}`} href="/posts/[slug]">
+            <a className="hover:underline">{title}</a>
+          </Link>
+        </h3>
+        <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+        <div class="flex items-center">
+          <img
+            class="w-10 h-10 rounded-full mr-4"
+            src={author.picture.url}
+            alt={author.name}
+          />
+          <div class="text-sm">
+            <p class="text-gray-900 leading-none">{author.name}</p>
+            <p class="text-gray-600">{date}</p>
+          </div>
+        </div>
       </div>
-      <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      {author && <Avatar name={author.name} picture={author.picture} />}
     </div>
-  )
+  );
 }

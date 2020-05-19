@@ -1,7 +1,6 @@
-import Link from 'next/link'
-import Avatar from '../components/avatar'
-import Date from '../components/date'
-import CoverImage from '../components/cover-image'
+import Link from "next/link";
+import Avatar from "../components/avatar";
+import Date from "../components/date";
 
 export default function HeroPost({
   title,
@@ -11,27 +10,40 @@ export default function HeroPost({
   author,
   slug,
 }) {
+  const bgPicture = {
+    background: `url(${coverImage.url}) no-repeat center/cover fixed`,
+  };
   return (
     <section>
-      <div className="mb-8 md:mb-16">
-        <CoverImage title={title} slug={slug} url={coverImage.url} />
-      </div>
-      <div className="md:grid md:grid-cols-2 md:col-gap-16 lg:col-gap-8 mb-20 md:mb-28">
-        <div>
-          <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
+      <div
+        className="overflow-hidden mb-16 md:mb-20 bg-accent-1 border-gray-400"
+        style={bgPicture}
+      >
+        <div className="mb-6 md:mb-8 h-64">
+          <Link as={`/posts/${slug}`} href="/posts/[slug]">
+            <div className="-mx-5 sm:mx-0" />
+          </Link>
+        </div>
+        <div className="px-6 py-4 bg-white bg-opacity-75">
+          <h2 className="text-3xl md:text-4xl tracking-tighter  mb-3 leading-snug">
             <Link as={`/posts/${slug}`} href="/posts/[slug]">
               <a className="hover:underline">{title}</a>
             </Link>
-          </h3>
-          <div className="mb-4 md:mb-0 text-lg">
-            <Date dateString={date} />
-          </div>
-        </div>
-        <div>
+          </h2>
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          {author && <Avatar name={author.name} picture={author.picture} />}
+          <div class="flex items-center">
+            <img
+              class="w-10 h-10 rounded-full mr-4"
+              src={author.picture.url}
+              alt={author.name}
+            />
+            <div class="text-sm">
+              <p class="text-gray-900 leading-none">{author.name}</p>
+              <p class="text-gray-600">{date}</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
