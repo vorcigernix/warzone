@@ -21,15 +21,15 @@ export default function PostPreview({
           </Link>
         </h3>
         <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-        <div class="flex items-center">
+        <div className="flex items-center">
           <img
-            class="w-10 h-10 rounded-full mr-4"
+            className="w-10 h-10 rounded-full mr-4"
             src={author.picture.url}
             alt={author.name}
           />
-          <div class="text-sm">
-            <p class="text-gray-900 leading-none">{author.name}</p>
-            <p class="text-gray-600">{date}</p>
+          <div className="text-sm">
+            <p className="text-gray-900 leading-none">{author.name}</p>
+            <p className="text-gray-600">{date}</p>
           </div>
         </div>
       </div>
