@@ -22,7 +22,7 @@ export default function HeroPost({
             <div className="-mx-5 sm:mx-0" />
           </Link>
         </div>
-        <div className="px-6 py-4 bg-white bg-opacity-75">
+        <div className="px-6 py-4 bg-white md:bg-opacity-75">
           <h2 className="text-3xl md:text-4xl tracking-tighter  mb-3 leading-snug">
             <Link as={`/posts/${slug}`} href="/posts/[slug]">
               <a className="hover:underline">{title}</a>

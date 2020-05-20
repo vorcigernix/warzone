@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CoverImage({url, slug }) {
   const bgPicture = {
-    background: `url(${url}) no-repeat center/cover fixed`,
+    background: `url(${url}?w=600&fm=webp&q=80) no-repeat`,
   };
   return (
     <Link as={`/posts/${slug}`} href="/posts/[slug]">
