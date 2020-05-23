@@ -1,0 +1,11 @@
+--2020-05-23 10:16:52--  https://boards-api.greenhouse.io/v1/boards/socialbakers
+Resolving boards-api.greenhouse.io (boards-api.greenhouse.io)... 52.0.214.172, 34.200.95.90, 52.86.35.113
+Connecting to boards-api.greenhouse.io (boards-api.greenhouse.io)|52.0.214.172|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/json]
+Saving to: ‘socialbakers.1’
+
+socialbakers.1                    [<=>                                              ]       0  --.-KB/s               socialbakers.1                    [ <=>                                             ]      38  --.-KB/s    in 0s      
+
+2020-05-23 10:16:52 (35.3 MB/s) - ‘socialbakers.1’ saved [38]
+
