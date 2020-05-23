@@ -15,11 +15,22 @@ export default function PostPreview({
         <CoverImage title={title} slug={slug} url={coverImage.url} />
       </div>
       <div className="px-6 py-4">
-        <h3 className="text-3xl mb-3 leading-snug">
+      <div className="flex items-center">
+      <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="32"
+            viewBox="0 0 32 32"
+            width="32"
+          >
+          <path d="M0 0h24v24H0V0z" fill="none" />
+          <path d="M3 18h12v-2H3v2zM3 6v2h18V6H3zm0 7h18v-2H3v2z" />
+        </svg>
+        <h3 className="text-3xl mb-3 ml-3 leading-snug">
           <Link as={`/posts/${slug}`} href="/posts/[slug]">
             <a className="hover:underline">{title}</a>
           </Link>
         </h3>
+        </div>
         <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
         <div className="flex items-center">
           <img
