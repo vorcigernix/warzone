@@ -1,5 +1,4 @@
 import Container from "./container";
-import { EXAMPLE_PATH } from "../lib/constants";
 
 export default function Footer() {
   return (
@@ -15,6 +14,12 @@ export default function Footer() {
               className="mx-3 my-6 font-bold hover:underline"
             >
               Support us
+            </a>
+            <a
+              href="/contact"
+              className="mx-3 my-6 font-bold hover:underline"
+            >
+              Contact us
             </a>
             <a
               href="/about"

@@ -1,4 +1,4 @@
-require('dotenv').config()
+require("dotenv").config();
 
 module.exports = {
   env: {
@@ -8,5 +8,6 @@ module.exports = {
       process.env.NEXT_EXAMPLE_CMS_CONTENTFUL_ACCESS_TOKEN,
     NEXT_EXAMPLE_CMS_CONTENTFUL_PREVIEW_ACCESS_TOKEN:
       process.env.NEXT_EXAMPLE_CMS_CONTENTFUL_PREVIEW_ACCESS_TOKEN,
+    SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
   },
-}
+};
