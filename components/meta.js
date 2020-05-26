@@ -1,9 +1,13 @@
-import Head from 'next/head'
-import { HOME_OG_IMAGE_URL } from '../lib/constants'
+import Head from "next/head";
+import { HOME_OG_IMAGE_URL } from "../lib/constants";
 
 export default function Meta() {
   return (
     <Head>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+      <link rel="preconnect" href="https://images.ctfassets.net" crossOrigin="true" />
+      <link rel="preconnect" href="https://img.youtube.com" crossOrigin="true" />
+
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -32,12 +36,12 @@ export default function Meta() {
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta
-        name="description"
-        content="Warzone Community News"
-      />
+      <meta name="description" content="Warzone Community News" />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
-      <meta name="google-site-verification" content="WhpcnwvR2ALaja47k7J63k3wI1tACXkqo6D_atVmvRE" />
+      <meta
+        name="google-site-verification"
+        content="WhpcnwvR2ALaja47k7J63k3wI1tACXkqo6D_atVmvRE"
+      />
     </Head>
-  )
+  );
 }
