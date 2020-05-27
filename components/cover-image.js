@@ -13,6 +13,7 @@ export default function CoverImage({ url, slug }) {
             src={url}
             alt={`Cover Image`}
             className="w-auto"
+            loading="lazy"
           />
         </picture>
       </Link>
