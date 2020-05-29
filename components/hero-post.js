@@ -8,18 +8,43 @@ export default function HeroPost({
   author,
   slug,
 }) {
-  const bgPicture = {
-    background: `url(${coverImage.url}) no-repeat center/cover fixed`,
-  };
   return (
     <section>
-      <div
-        className="overflow-hidden mb-16 md:mb-20 bg-accent-1 border-gray-400"
-        style={bgPicture}
-      >
-        <div className="mb-6 md:mb-8 seventy">
+      <div className="mb-16 md:mb-20">
+        <div className="mb-6 md:mb-8 md:seventy overflow-hidden">
           <Link as={`/posts/${slug}`} href="/posts/[slug]">
-            <div className="-mx-5 sm:mx-0" />
+            <picture>
+            <source
+                media="(min-width: 1200px)"
+                srcSet={`${coverImage.url}?w=1240&fm=webp&q=80`}
+              />
+              <source
+                media="(min-width: 1200px)"
+                srcSet={`${coverImage.url}?w=1240&fm=jpg&q=90`}
+              />
+              <source
+                media="(min-width: 800px)"
+                srcSet={`${coverImage.url}?w=800&fm=webp&q=80`}
+              />
+              <source
+                media="(min-width: 800px)"
+                srcSet={`${coverImage.url}?w=800&fm=jpg&q=90`}
+              />
+              <source
+                media="(max-width: 799px)"
+                srcSet={`${coverImage.url}?w=400&fm=webp&q=80`}
+              />
+              <source
+                media="(max-width: 799px)"
+                srcSet={`${coverImage.url}?w=400&fm=jpg&q=90`}
+              />
+              <img
+                src={coverImage.url}
+                alt={`Cover Image`}
+                className="w-screen"
+                loading="lazy"
+              />
+            </picture>
           </Link>
         </div>
         <div className="px-6 py-4 bg-white md:bg-opacity-75">

@@ -1,5 +1,7 @@
-.seventy {
-  height: 77vh;
+@responsive {
+  .seventy {
+    height: 77vh;
+  }
 }
 
 html {
