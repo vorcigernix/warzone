@@ -17,7 +17,7 @@ export default function HeroPost({
         className="overflow-hidden mb-16 md:mb-20 bg-accent-1 border-gray-400"
         style={bgPicture}
       >
-        <div className="mb-6 md:mb-8 h-64">
+        <div className="mb-6 md:mb-8 seventy">
           <Link as={`/posts/${slug}`} href="/posts/[slug]">
             <div className="-mx-5 sm:mx-0" />
           </Link>
