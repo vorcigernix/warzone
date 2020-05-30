@@ -14,33 +14,41 @@ export default function HeroPost({
         <div className="mb-6 md:mb-8 md:seventy overflow-hidden">
           <Link as={`/posts/${slug}`} href="/posts/[slug]">
             <picture>
-            <source
-                media="(min-width: 1200px)"
-                srcSet={`${coverImage.url}?w=1240&fm=webp&q=80`}
+              <source
+                media="(min-width: 1600px)"
+                srcSet={`https:${coverImage.url}?w=1680&fm=webp&q=80`}
+              />
+              <source
+                media="(min-width: 1600px)"
+                srcSet={`https:${coverImage.url}?w=1680&fm=jpg&q=90`}
               />
               <source
                 media="(min-width: 1200px)"
-                srcSet={`${coverImage.url}?w=1240&fm=jpg&q=90`}
+                srcSet={`https:${coverImage.url}?w=1240&fm=webp&q=80`}
+              />
+              <source
+                media="(min-width: 1200px)"
+                srcSet={`https:${coverImage.url}?w=1240&fm=jpg&q=90`}
               />
               <source
                 media="(min-width: 800px)"
-                srcSet={`${coverImage.url}?w=800&fm=webp&q=80`}
+                srcSet={`https:${coverImage.url}?w=800&fm=webp&q=80`}
               />
               <source
                 media="(min-width: 800px)"
-                srcSet={`${coverImage.url}?w=800&fm=jpg&q=90`}
+                srcSet={`https:${coverImage.url}?w=800&fm=jpg&q=90`}
               />
               <source
                 media="(max-width: 799px)"
-                srcSet={`${coverImage.url}?w=400&fm=webp&q=80`}
+                srcSet={`https:${coverImage.url}?w=400&fm=webp&q=80`}
               />
               <source
                 media="(max-width: 799px)"
-                srcSet={`${coverImage.url}?w=400&fm=jpg&q=90`}
+                srcSet={`https:${coverImage.url}?w=400&fm=jpg&q=90`}
               />
               <img
-                src={coverImage.url}
-                alt={`Cover Image`}
+                src={`https:${coverImage.url}`}
+                alt={`Hero Post Image`}
                 className="w-screen"
                 loading="lazy"
               />
