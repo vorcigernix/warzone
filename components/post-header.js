@@ -9,18 +9,13 @@ export default function PostHeader({ title, coverImage, date, author }) {
   };
   return (
     <>
-      <div className="h-48" style={bgSlugPicture}>
+      <div className="my-10" style={bgSlugPicture}>
         <PostTitle>{title}</PostTitle>
       </div>
-      <div className="flex items-center">
-        <img
-          className="w-10 h-10 rounded-full mr-4"
-          src={author.picture.url}
-          alt={author.name}
-        />
-        <div className="text-sm">
-          <p className="text-gray-900 leading-none">{author.name}</p>
-          <p className="text-gray-600">{date}</p>
+      <div className="flex items-center ">
+        <div className=" bg-gray-600 py-2 px-3 ">
+          <p className="text-gray-900 leading-none font-bold uppercase">{author.name}</p>
+          <p className="text-gray-900 text-xs">{date}</p>
         </div>
       </div>
     </>

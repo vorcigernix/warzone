@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CoverImage({ url, slug }) {
   return (
-    <div className="h-64 overflow-hidden ">
+    <div className="md:h-64 overflow-hidden">
       <Link as={`/posts/${slug}`} href="/posts/[slug]">
         <picture>
           <source media="(min-width: 800px)" srcSet={`${url}?w=800&fm=webp&q=80`} />
@@ -12,7 +12,7 @@ export default function CoverImage({ url, slug }) {
           <img
             src={url}
             alt={`Cover Image`}
-            className="w-full"
+            className="w-screen"
             loading="lazy"
           />
         </picture>

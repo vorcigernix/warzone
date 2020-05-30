@@ -10,7 +10,7 @@ export default function HeroPost({
 }) {
   return (
     <section>
-      <div className="mb-16 md:mb-20">
+      <div className="mb-16 md:mb-20 bg-gray-900">
         <div className="mb-6 md:mb-8 md:seventy overflow-hidden">
           <Link as={`/posts/${slug}`} href="/posts/[slug]">
             <picture>
@@ -47,8 +47,8 @@ export default function HeroPost({
             </picture>
           </Link>
         </div>
-        <div className="px-6 py-4 bg-white md:bg-opacity-75">
-          <h2 className="text-3xl md:text-4xl tracking-tighter  mb-3 leading-snug">
+        <div className="px-6 py-4 text-gray-100">
+          <h2 className="text-3xl md:text-4xl tracking-tighter mb-3 leading-snug">
             <Link as={`/posts/${slug}`} href="/posts/[slug]">
               <a className="hover:underline">{title}</a>
             </Link>
@@ -61,7 +61,7 @@ export default function HeroPost({
               alt={author.name}
             />
             <div className="text-sm">
-              <p className="text-gray-900 leading-none">{author.name}</p>
+              <p className="text-gray-600 leading-none">{author.name}</p>
               <p className="text-gray-600">{date}</p>
             </div>
           </div>

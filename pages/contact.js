@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Container from "../components/container";
-import Intro from "../components/intro";
+import Navigation from "../components/navigation";
 import Layout from "../components/layout";
 import Head from "next/head";
 
@@ -67,15 +67,16 @@ export default function Contact() {
       <Head>
         <title>Contact us</title>
       </Head>
-      <Container>
-        <Intro />
-        <div className="mb-8 md:mb-16">
+      <Navigation/>
+
+        <div className="mb-8 md:mb-16 overflow-hidden h-64">
           <img
             src="about.jpg"
             alt="Cover Image for contact page"
-            className="shadow-small border-gray-400 rounded-md"
+            className="w-screen"
           />
         </div>
+        <Container>
         <main>
           <form className="w-full md:w-2/3 pb-8" onSubmit={handleOnSubmit}>
             <div className="md:flex md:items-center mb-6">

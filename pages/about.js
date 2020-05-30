@@ -1,5 +1,5 @@
 import Container from "../components/container";
-import Intro from "../components/intro";
+import Navigation from "../components/navigation";
 import Layout from "../components/layout";
 import Head from "next/head";
 import Date from "../components/date";
@@ -11,25 +11,27 @@ export default function About() {
         <Head>
           <title>About us</title>
         </Head>
+        <Navigation />
+
+        <div className="mb-8 md:mb-16 overflow-hidden h-64">
+          <img
+            src="about.jpg"
+            alt="Cover Image for contact page"
+            className="w-screen"
+          />
+        </div>
         <Container>
-          <Intro />
-          <div className="mb-8 md:mb-16">
-            <img
-              src="about.jpg"
-              alt="Cover Image for about page"
-              className="shadow-small border-gray-400 rounded-md"
-            />
-          </div>
+
           <div className="md:grid md:grid-cols-2 md:col-gap-16 lg:col-gap-8 mb-20 md:mb-28">
             <div>
-              <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
+              <h3 className="mb-4 text-4xl lg:text-6xl leading-tight text-white">
                 Who are we
               </h3>
               <div className="mb-4 md:mb-0 text-lg">
                 <Date dateString="05/18/2020" />
               </div>
             </div>
-            <div>
+            <div className="text-white">
               <p className="text-lg leading-relaxed mb-4">
                 We are gamers like you. We were looking for a simple portal for
                 news about our favorite game and while there is many sites
@@ -43,8 +45,8 @@ export default function About() {
               </p>
               <p className="text-lg leading-relaxed mb-4">
                 We will keep this site free and independent. We will not accept
-                any help from anyone than you - Patreon link is below and we
-                are considering other options. For now, the operation costs are
+                any help from anyone than you - Patreon link is below and we are
+                considering other options. For now, the operation costs are
                 minimal and we can cover them from our pockets.
               </p>
             </div>

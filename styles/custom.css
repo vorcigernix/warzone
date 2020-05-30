@@ -20,5 +20,12 @@ h3 {
   font-family: "Anton", sans-serif;
 }
 body {
-  background: #ffffff;
+    background-color: rgba(26, 32, 44, 1);
+}
+#menu-toggle:checked + #menu {
+    display: block;
+}
+
+.ytred{
+   background-color: #FF0000;
 }
