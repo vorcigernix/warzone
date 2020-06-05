@@ -1,2 +1,2 @@
-#Warzone.now.sh
+# Warzone.now.sh
 source code
