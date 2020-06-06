@@ -23,14 +23,14 @@ jobs:
         git merge
     - name: Create local changes
       run: |
-        cd dependencycache
+        cd public/dependencycache/
         curl 'https://www.googletagmanager.com/gtag/js?id=UA-167405833-1' -o 'gtm.js'
         curl 'https://www.google-analytics.com/analytics.js' -o 'analytics.js'
     - name: Commit files
       run: |
         git config --local user.email "vorcigernix@gmail.com"
         git config --local user.name "Adam Sobotka"
-        git add dependencycache/
+        git add public/dependencycache/
         git commit -m "Update cached assets"
         git push
         
