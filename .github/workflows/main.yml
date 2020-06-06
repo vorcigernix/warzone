@@ -14,9 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      with:
-        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-        fetch-depth: 0
+     # with:
+        #persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+        #fetch-depth: 0
     - name: Create local changes
       run: |
         cd dependencycache
@@ -28,9 +28,5 @@ jobs:
         git config --local user.name "Adam Sobotka"
         git add dependencycache/
         git commit -m "Update cached assets"
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        force: true  
-        directory: 'dependencycache' 
+        git push
+        
