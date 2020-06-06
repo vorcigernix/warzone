@@ -13,6 +13,10 @@ const DynamicHero = dynamic(() => import("../components/hero-post"), {
   loading: () => HeroScaffold,
 });
 
+const ArchiveLink = dynamic(() => import("../components/archive-link"), {
+  loading: () => <p>...</p>,
+});
+
 const HeroScaffold = (
   <div className="mb-16 md:mb-20 bg-gray-900">
     <div className="mb-6 md:mb-8 md:seventy overflow-hidden">
@@ -44,6 +48,9 @@ export default function Index({ preview, allPosts }) {
         )}
         <Container>
           {morePosts.length > 0 && <DynamicStories posts={morePosts} />}
+          <div className="grid grid-cols-1 md:grid-cols-2 md:col-gap-16 lg:col-gap-20 row-gap-20 md:row-gap-32 mb-32">
+            <ArchiveLink/>
+          </div>
         </Container>
       </Layout>
     </>

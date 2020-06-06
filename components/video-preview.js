@@ -5,8 +5,8 @@ export default function VideoPreview({ title, date, excerpt, youtubeID }) {
     <div className="overflow-hidden ytred shadow-small border-gray-100 hover:shadow-medium transition-shadow duration-200">
       <div className="md:mb-5">
       <div className="md:h-64 overflow-hidden">
-      <Link as={`https://www.youtube.com/watch?v=${youtubeID}`}
-              href="https://www.youtube.com/watch?v=[youtubeID]">
+      <Link as={`//www.youtube.com/watch?v=${youtubeID}`}
+              href="//www.youtube.com/watch?v=[youtubeID]" prefetch={false}>
         <picture>
           <source srcSet={`https://i.ytimg.com/vi/${youtubeID}/hqdefault.jpg`} />
           <source srcSet={`https://i.ytimg.com/vi_webp/${youtubeID}/hqdefault.webp`} />
@@ -34,8 +34,9 @@ export default function VideoPreview({ title, date, excerpt, youtubeID }) {
           </svg>
           <h3 className="text-3xl mb-3 ml-3 leading-snug">
             <Link
-              as={`https://www.youtube.com/watch?v=${youtubeID}`}
-              href="https://www.youtube.com/watch?v=[youtubeID]"
+              as={`//www.youtube.com/watch?v=${youtubeID}`}
+              href="//www.youtube.com/watch?v=[youtubeID]"
+              prefetch={false}
             >
               <a target="wartube" className="hover:underline text-white">
                 {title}
