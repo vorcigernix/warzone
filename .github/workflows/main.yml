@@ -17,6 +17,10 @@ jobs:
      # with:
         #persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
         #fetch-depth: 0
+    - name: Pull
+      run: |
+        git pull
+        git merge
     - name: Create local changes
       run: |
         cd dependencycache
@@ -26,7 +30,6 @@ jobs:
       run: |
         git config --local user.email "vorcigernix@gmail.com"
         git config --local user.name "Adam Sobotka"
-        git pull
         git add dependencycache/
         git commit -m "Update cached assets"
         git push
