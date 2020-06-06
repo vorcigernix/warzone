@@ -26,6 +26,7 @@ jobs:
       run: |
         git config --local user.email "vorcigernix@gmail.com"
         git config --local user.name "Adam Sobotka"
+        git pull
         git add dependencycache/
         git commit -m "Update cached assets"
         git push
