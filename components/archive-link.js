@@ -17,7 +17,7 @@ export default function ArchiveLink() {
           </svg>
           <h3 className="text-3xl mb-3 ml-3 leading-snug text-white">
             <Link href="/archive">
-              <a className="hover:underline">Even More</a>
+                <a className="hover:underline">Even More Stories</a>
             </Link>
           </h3>
         </div>
