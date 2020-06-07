@@ -48,9 +48,7 @@ export default function Index({ preview, allPosts }) {
         )}
         <Container>
           {morePosts.length > 0 && <DynamicStories posts={morePosts} />}
-          <div className="grid grid-cols-1 md:grid-cols-2 md:col-gap-16 lg:col-gap-20 row-gap-20 md:row-gap-32 mb-32">
             <ArchiveLink/>
-          </div>
         </Container>
       </Layout>
     </>
