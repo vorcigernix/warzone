@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { formatRelative } from "date-fns";
 
 export default function HeroPost({
   title,
@@ -10,7 +11,7 @@ export default function HeroPost({
 }) {
   return (
     <section>
-      <div className="mb-16 md:mb-20 bg-gray-900">
+      <div className="mb-16 md:mb-20 bg-gray-800">
         <div className="mb-6 md:mb-8 md:seventy overflow-hidden">
           <Link as={`/posts/${slug}`} href="/posts/[slug]">
             <picture>
@@ -64,13 +65,17 @@ export default function HeroPost({
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
           <div className="flex items-center">
             <img
-              className="w-10 h-10 rounded-full mr-4"
+              className="w-10 h-10  mr-4"
               src={author.picture.url}
               alt={author.name}
             />
             <div className="text-sm">
-              <p className="text-gray-600 leading-none">{author.name}</p>
-              <p className="text-gray-600">{date}</p>
+              <p className="text-gray-500 font-extrabold leading-none">
+                {author.name}
+              </p>
+              <p className="text-gray-500">
+                {formatRelative(new Date(date), new Date())}
+              </p>
             </div>
           </div>
         </div>

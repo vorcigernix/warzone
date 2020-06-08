@@ -4,7 +4,7 @@ import VideoPreview from "../components/video-preview";
 export default function MoreStories({ posts }) {
   return (
     <section>
-      <h2 className="mb-8 text-4xl md:text-5xl tracking-tighter leading-tight text-gray-600">
+      <h2 className="mb-8 mx-4 text-4xl md:text-5xl tracking-tighter leading-tight text-gray-600">
         More Stories
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 md:col-gap-16 lg:col-gap-20 row-gap-20 md:row-gap-32 mb-32">
